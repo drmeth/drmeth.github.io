@@ -456,6 +456,6 @@ section.course-content {
 @media only screen and (max-width: 480px) {
     header .heading,
     header nav {
-        display: none;
+        display: none !important;
     }
 }

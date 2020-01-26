@@ -463,6 +463,8 @@ section.course-content {
 
 @media only screen and (max-width: 480px) {
 
+    /*header styles*/
+
     header #heading,
     header nav {
         display: none;
@@ -480,7 +482,48 @@ section.course-content {
     }
 
     #mobile-nav img {
-        width: 35px;
+        width: 27px;
         height: auto;
+    }
+
+    main {
+            grid-area: main;
+            display: grid;
+            grid: "learn-something" auto
+                "keep-practising" 680px
+                "start-learning"  740px
+                "thesis-exhibit"  600px
+                / 100%;
+    }
+
+    /*learn-something section*/
+
+    #learn-something {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.books-image {
+        width: 100%;
+        height: 220px;
+        margin-left: 0;
+    }
+
+    .learn-something-subsection {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    .learn-something-subsection .start-here {
+        height: 38px;
+        width: 100%;
+        background-color: hsl(0, 0%, 25%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
     }
 }

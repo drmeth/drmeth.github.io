@@ -459,6 +459,9 @@ section.course-content {
         display: none;
     }
 
+    .small-container img.mobile {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -490,7 +493,7 @@ section.course-content {
             grid-area: main;
             display: grid;
             grid: "learn-something" auto
-                "keep-practising" 680px
+                "keep-practising" auto
                 "start-learning"  740px
                 "thesis-exhibit"  600px
                 / 100%;
@@ -525,5 +528,57 @@ section.course-content {
         justify-content: center;
         align-items: center;
         margin: 1rem 0;
+    }
+
+    #keep-practising {
+        grid-area: keep-practising;
+        display: grid;
+        grid: "right" 1fr
+              "right" 1fr
+              "right" 1fr
+              / 1fr;
+        background-color: rgb(238, 234, 234);
+    }
+
+    /*keep-practising section layout and content*/
+
+    section.left-paragraph {
+        display: none;
+    }
+
+    /*right*/
+
+    #right {
+        grid-area: right;
+        border: none;
+        display: grid;
+        padding: 1rem 0;
+        grid: 1fr 1fr 1fr / 1fr;
+    }
+
+    div.small-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    section.info {
+        width: 90%;
+        padding-left: 0.5rem;
+    }
+
+    .small-container img.desktop {
+        display: none;
+    }
+
+    .small-container img.mobile {
+        display: block;
+        width: 90%;
+        height: auto;
+    }
+
+    .border {
+        border: none;
     }
 }

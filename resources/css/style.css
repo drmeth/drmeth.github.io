@@ -462,6 +462,10 @@ section.course-content {
     .small-container img.mobile {
         display: none;
     }
+
+    .wrap-for-mobile {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -494,12 +498,12 @@ section.course-content {
             display: grid;
             grid: "learn-something" auto
                 "keep-practising" auto
-                "start-learning"  740px
+                "start-learning"  auto
                 "thesis-exhibit"  600px
                 / 100%;
     }
 
-    /*learn-something section*/
+    /*learn-something section for mobile*/
 
     #learn-something {
         display: flex;
@@ -530,17 +534,19 @@ section.course-content {
         margin: 1rem 0;
     }
 
-    #keep-practising {
-        grid-area: keep-practising;
-        display: grid;
-        grid: "right" 1fr
-              "right" 1fr
-              "right" 1fr
-              / 1fr;
-        background-color: rgb(238, 234, 234);
-    }
+    
 
-    /*keep-practising section layout and content*/
+    /*keep-practising section for mobile*/
+
+    #keep-practising {
+            grid-area: keep-practising;
+            display: grid;
+            grid: "right" 1fr
+                "right" 1fr
+                "right" 1fr
+                / 1fr;
+            background-color: rgb(238, 234, 234);
+        }
 
     section.left-paragraph {
         display: none;
@@ -581,4 +587,53 @@ section.course-content {
     .border {
         border: none;
     }
+
+    /*start-learning section for mobile*/
+
+    #start-learning {
+        grid-area: start-learning;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: lightgray;
+    }
+    
+    #big-wrapper {
+        width: 90%;
+        height: 490px;
+        display: grid;
+        grid: "first" 70px
+              "second" 70px
+              "third" 70px
+              "fourth" 70px
+              "fifth" 70px
+              "sixth" 70px
+              / 1fr;
+        grid-gap: 0.4rem;
+    }
+
+    .wrap-for-mobile {
+        display: block;
+        margin-left: 0.7rem;
+        font-weight: bold;
+    }
+
+    div.pic,
+    section.course-content {
+        display: none;
+    }
+    
+    .wrapper {
+        display: flex;
+        align-items: center;
+        min-height: 0;
+        height: 70px;
+        background-color: rgb(238, 234, 234);
+    }
+
+    #start-learning h2 {
+        margin: 0.5rem 0;
+    }
+
 }

@@ -499,7 +499,7 @@ section.course-content {
             grid: "learn-something" auto
                 "keep-practising" auto
                 "start-learning"  auto
-                "thesis-exhibit"  600px
+                "thesis-exhibit"  auto
                 / 100%;
     }
 
@@ -636,4 +636,66 @@ section.course-content {
         margin: 0.5rem 0;
     }
 
+
+    /*thesis exhibit section for mobile*/
+
+    #thesis-exhibit {
+        grid-area: thesis-exhibit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(238, 234, 234);
+    }
+
+    #thesis-exhibit h2 {
+        margin: 0.5rem 0 1rem;
+    }
+    
+    #thesis-exhibit video {
+        max-width: 550px;
+    }
+    
+    .wrap-it {
+        display: grid;
+        height: 100%;
+        grid: "le" 1fr
+              / 1fr;
+    }
+    
+    /*left side*/
+    
+    .le {
+        display: block;
+    }
+
+    .le video {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .video-description {
+        display: none;
+    }
+    
+    /*right side*/
+    
+    .ri {
+        display: none;
+    }
+
+    /*footer layout for mobile*/
+
+    footer {
+        display: flex;
+        align-items: center;
+    }
+
+    .terms-privacy {
+        display: none;
+    }
+
+    .copyright {
+        margin: 0 0 0 0.8rem;
+    }
 }
